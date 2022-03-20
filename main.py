@@ -3,13 +3,14 @@ import sys
 import click
 from contextlib import closing
 import time
-
+import json
 
 class Wiz:
     def __init__(self,ip,port):
         self.ip = ip
         self.port = port
-
+        self.color = {}
+        self.dimming = 100
     def turn_on(self):
         message = '{"id":1,"method":"setState","params":{"state":true}}'
         udp_client(self.ip,self.port,message)
@@ -19,9 +20,21 @@ class Wiz:
         udp_client(self.ip,self.port,message)
 
     def change_color(self):
-        message = '{"id":1,"method":"setPilot","params":{"r":0,"g":0,"b":255,"dimming":100}}'
-        udp_client(self.ip,self.port,message)
+        self.color = self.ask_color()
+        message = '{"id":1,"method":"setPilot","params":{"r":0,"g":0,"b":0,"dimming":100}}'
+        json_message = json.loads(message)
+        json_message['params']['r'] = self.color['r']
+        json_message['params']['g'] = self.color['g']
+        json_message['params']['b'] = self.color['b']
+        json_message['params']['dimming'] = self.dimming
+        udp_client(self.ip,self.port,json.dumps(json_message))
 
+    def ask_color(self):
+        red = int(input("input r value: "))
+        green = int(input("input g value: "))
+        blue = int(input("input b value: "))
+        new_color  = {"r":red,"g":green,"b":blue}
+        return new_color
 
 def udp_client(ip,port,message):
     s = socket.socket(socket.AF_INET,socket.SOCK_DGRAM,0)
@@ -71,20 +84,30 @@ def error_check(port,ipaddr):
     else:
         return False;
 
+
+def gettui():
+    print('welcome to pyauto cli..')
             
 @click.command()
 @click.option("-p","--port",default=38899,type=int)
-@click.option("-ip","--ipaddr",required=True,type=str)
+@click.option("-ip","--ipaddr",required=True,type=str,prompt="please enter the ip of your wiz light (you can get it from your wiz mobile app)")
 @click.option("-m","--message",default="hello world (default message)",type=str)
-def main(port,ipaddr,message):
-    if error_check(port,ipaddr):
-        wiz_light = Wiz(ipaddr,port)
-        wiz_light.turn_off()
-        time.sleep(5)
-        wiz_light.turn_on()
-        time.sleep(5)
-        wiz_light.change_color()
+@click.option('--tui',is_flag=True)
+@click.option('-cc','--changecolor',is_flag=True)
+@click.option('-off','--turnoff',is_flag=True)
+@click.option('-on','--turnon',is_flag=True)
+def main(port,ipaddr,message,tui,changecolor,turnoff,turnon):
+    if(error_check(port,ipaddr)):
+       wiz_light = Wiz(ipaddr,port)
+       if turnon:
+          wiz_light.turn_on()
+       if changecolor:
+          wiz_light.change_color()
+       if turnoff:
+          wiz_light.turn_off()
+       if tui:
+           print("tui comming soon")
     else:
-        print('false..')
-   
+       print("some error")
+    
 main()
