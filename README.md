@@ -8,23 +8,24 @@
 ## control your wiz light in your PC !!!
 **wiz light can only be controlled with wiz mobile app , this cli tools gives you access for your wiz light in pc !!**
 
-## installation
+## INSTALLATION
 + clone the repo
 `git clone https://github.com/infinityInfinite/philips-wiz-cli.git`
 + install the requirements file
 `pip3 install -r requirements.txt`
 
-## usage
+## USAGE
 + `python3 wizcli.py --help`
 
-### options
+### OPTIONS
 + changecolor
 + turnoff
 + turnon
 + setscene
 + dimming
-*more options comming soon*
+### *more options comming soon*
 
+#### get ip address of your wiz light from your wiz mobile app !!
 
 
 ![made with python](http://ForTheBadge.com/images/badges/made-with-python.svg)
