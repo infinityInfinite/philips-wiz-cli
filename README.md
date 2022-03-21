@@ -4,7 +4,7 @@
 ![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![maintaining](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 ![issues](https://img.shields.io/codeclimate/issues/infinityInfinite/philips-wiz-cli)
-![made by infinityInfinite](https://img.shields.io/badge/Made%20By-infinityInfinite-red)
+![made by infinityInfinite](https://img.shields.io/badge/Made%20By-infinityInfinite-blue)
 
 ## control your wiz light in your PC !!!
 **wiz light can only be controlled with wiz mobile app , this cli tools gives you access for your wiz light in pc !!**
