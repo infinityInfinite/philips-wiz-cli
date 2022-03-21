@@ -4,9 +4,13 @@ import click
 import time
 import json
 import pyfiglet
+import os
 from contextlib import closing
 from scenes import get_scenes
 from termcolor import colored,cprint
+
+
+os.system('color')
 
 class Wiz:
     def __init__(self,ip,port):
