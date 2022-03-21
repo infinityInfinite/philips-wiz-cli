@@ -3,7 +3,7 @@
 ![ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![maintaining](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
-![issues](https://img.shields.io/github/issues/{infinityInfinite }/{philips-wiz-cli}.svg)
+![issues](https://img.shields.io/codeclimate/issues/infinityInfinite/philips-wiz-cli)
 ![made by infinityInfinite](https://img.shields.io/badge/Made%20By-infinityInfinite-red)
 
 ## control your wiz light in your PC !!!
