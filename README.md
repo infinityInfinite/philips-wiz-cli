@@ -20,11 +20,11 @@
 
 ## EXAMPLES
 + **default port is already set to 38899**
-+ `python3 wizcli.py [IP ADDRESS] [PORT] --turnoff` 
-+ `python3 wizcli.py [IP ADDRESS] [PORT] --turnon`
-+ `python3 wizcli.py [IP ADDRESS] [PORT] --changecolor`
-+ `python3 wizcli.py [IP ADDRESS] [PORT] --setscene`
-+ `python3 wizcli.py [IP ADDRESS] [PORT] --dimming`
++ `python3 wizcli.py -ip [IP ADDRESS] -p [PORT] --turnoff` 
++ `python3 wizcli.py -ip [IP ADDRESS] -p [PORT] --turnon`
++ `python3 wizcli.py -ip [IP ADDRESS] -p [PORT] --changecolor`
++ `python3 wizcli.py -ip [IP ADDRESS] -p [PORT] --setscene`
++ `python3 wizcli.py -ip [IP ADDRESS] -p [PORT] --dimming`
 
 
 ### OPTIONS
