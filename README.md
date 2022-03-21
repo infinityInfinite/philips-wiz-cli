@@ -4,6 +4,7 @@
 ![python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![maintaining](https://img.shields.io/badge/Maintained%3F-yes-green.svg)
 ![issues](https://img.shields.io/github/issues/{infinityInfinite }/{philips-wiz-cli}.svg)
+![made by infinityInfinite](https://img.shields.io/badge/Made%20By-infinityInfinite-red)
 
 ## control your wiz light in your PC !!!
 **wiz light can only be controlled with wiz mobile app , this cli tools gives you access for your wiz light in pc !!**
@@ -23,6 +24,7 @@
 + `python3 wizcli.py [IP ADDRESS] [PORT] --turnon`
 + `python3 wizcli.py [IP ADDRESS] [PORT] --changecolor`
 + `python3 wizcli.py [IP ADDRESS] [PORT] --setscene`
++ `python3 wizcli.py [IP ADDRESS] [PORT] --dimming`
 
 
 ### OPTIONS
@@ -38,4 +40,4 @@
 
 ![made with python](http://ForTheBadge.com/images/badges/made-with-python.svg)
 ![made with love](http://ForTheBadge.com/images/badges/built-with-love.svg)
-![made by infinityInfinite](https://img.shields.io/badge/Made%20By-infinityInfinite-red)
+
